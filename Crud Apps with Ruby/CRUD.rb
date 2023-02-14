@@ -67,10 +67,13 @@ offer.all_products.each do |product|
         Discounted Price: #{product[:discount_price]}"
 end
 
-p "............"
+puts "Print the single product from Title"
 
 single_product = offer.find_product("Panjabhi")
-puts single_product.inspect
+puts "Title: #{single_product.title},
+      Price: #{single_product.price},
+      Discount: #{single_product.discount},
+      Discounted Price: #{single_product.after_discount_price}"
 
 p "............"
 
