@@ -1,1 +1,1 @@
-# Basic-of-Ruby-On-Rails
+# Ruby-on-Rails-Fundamentals
