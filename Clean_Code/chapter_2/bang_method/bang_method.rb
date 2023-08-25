@@ -4,16 +4,45 @@ class BangMethod
     @friends.delete(friend)
   end
 end
+class User
+  attr_accessor :friends
+
+  def initialize
+    @friends = []
+  end
+
+  def remove_friend!(friend)
+    @friends.delete(friend)
+  end
+end
+
+# Create a user instance
+user = User.new
+
+user.friends = ['Alice', 'Bob', 'Charlie', 'David']
+# Print the friends before removal
+puts "Friends before removal: #{user.friends.join(', ')}"
+
+# Remove a friend using the bang method
+user.remove_friend!('masum')
+
+# Print the friends after removal
+puts "Friends after removal: #{user.friends.join(', ')}"
+
+p "/////////////////////////////////////////"
 # frozen_string_literal: true
 array = [1,5,6,4]
 p array
 p array.sort
 p array.sort!
 
+p "/////////////////////////////////////////"
+
 foo = "A STRING"
 foo.downcase!
 puts foo
 
+p "/////////////////////////////////////////"
 class StringManipulator
   attr_accessor :text
 
